@@ -8,7 +8,7 @@ import { useAuth } from "./context/AuthProvider";
 import Courses from "./courses/Courses";
 import Home from "./home/Home";
 import toast, { Toaster } from 'react-hot-toast';
-import {Navigate, Route, Routes } from "react-router-dom"
+import {Navigate, Route, Routes, Router } from "react-router-dom"
 
 export default function App() {
   const [authUser,useAuthUser] = useAuth();
@@ -18,6 +18,7 @@ export default function App() {
      
    {/* <Home/>
    <Course/> */}
+   <Router>
    <Routes >
     
    
@@ -28,6 +29,7 @@ export default function App() {
     <Route path="/addpost" element={<AddPost/>}></Route>
    
    </Routes>
+   </Router>
    <Toaster />
      </>
   )
