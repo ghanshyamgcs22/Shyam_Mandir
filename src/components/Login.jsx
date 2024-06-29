@@ -24,6 +24,7 @@ function Login() {
     //  alert(msg);
     res.data.success===true?toast.success(msg):toast.error(msg);
     //  toast.success(msg);
+       if(msg!=="User not found")
       localStorage.setItem("user", JSON.stringify(res.data.data)); 
     } catch (err) {
       const errorMessage = err.response?.data?.message ;
